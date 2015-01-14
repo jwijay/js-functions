@@ -202,6 +202,9 @@ function letterGrade(score, total) {
   var grade = "";
 
   switch (true) {
+    case (percent > 100):
+      grade = "A+";
+      break;
     case (90 <= percent && percent <= 100):
       grade = "A";
       console.log('reaches here');
@@ -218,6 +221,8 @@ function letterGrade(score, total) {
     case (0 <= percent && percent < 60):
       grade = "F";
       break;
+    default:
+      grade = "F";
   }
 
   return grade;
@@ -263,4 +268,8 @@ function createCircle(radius) {
     area: Math.PI * square(radius)
   };
   return Circle;
+}
+
+function improvedCombine(word1, word2, glue) {
+  return word1 + glue + word2;
 }

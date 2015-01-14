@@ -6,17 +6,21 @@ function runAfterTests() {
    */
 
   // Create a variable called `myNumber`, and assign it to any number
+  var myNumber = 42;
 
   /**
    * Create another variable called `stringValue`.
    * Assign it the value that's returned when you pass
    * `myNumber into the function `numberToString`.
    */
+  var stringValue = numberToString(myNumber);
 
   /**
    * If you pass `myNumber` and `stringValue` into `areEqual`,
    * what value will you get back? Why is that?
    */
+  console.log("myNumber and stringValue are equal: " + areEqual(myNumber, stringValue));
+  console.log("They are not equal because areEqual checks for strict equality.");
 
   /**
    * You may have noticed that the `calculate` function combined
@@ -25,7 +29,12 @@ function runAfterTests() {
    * If you didn't go back and try it, this is called "reusability"!
    */
 
+  //Yes, I called those functions inside of calculate.
+
   // Do you see any other functions where code could be reused?
+
+  //Yes, wherever I use the operators (divide, multiply, subtract, add), I could use
+  //the functions I wrote earlier.
 
   /**
    * For your `letterGrade` function,
@@ -33,6 +42,9 @@ function runAfterTests() {
    * or greater than the `total` value?
    * Does it still work as expected? If it doesn't, how could you improve this?
    */
+
+   //Added two switch cases: (1) percent > 100%, receives A+ (2) default
+   //(for scores less than 0), still receives F.
 
   /**
    * Your `combine` function looks okay,
@@ -44,6 +56,6 @@ function runAfterTests() {
 
   // What happens if you were to uncomment the following lines?
 
-  // combine = improvedCombine;
-  // console.log(combine('combine', 'improved!', ' is '));
+  combine = improvedCombine;
+  console.log(combine('combine', 'improved!', ' is '));
 }
