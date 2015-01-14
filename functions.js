@@ -32,6 +32,9 @@ function numberToString(n) {
  * @param {number} y
  * @return {number} the sum
  */
+function add(x, y) {
+  return x + y;
+}
 
 /**
  * Subtracts the second number from the first.
