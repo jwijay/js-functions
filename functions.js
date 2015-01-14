@@ -136,6 +136,9 @@ function square(x) {
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+function areEqual(a, b) {
+  return (a === b);
+}
 
 /**
  * Returns the smallest value of two numbers.
