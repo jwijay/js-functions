@@ -84,30 +84,30 @@ function square(x) {
  * @return {number} the result
  */
 function calculate(operation, x, y) {
-var opSymbol = "";
-var result = null;
-switch (operation) {
-  case "add":
-    opSymbol = " + ";
-    result = add(x,y);
-    break;
-  case "subtract":
-    opSymbol = " - ";
-    result = subtract(x,y);
-    break;
-  case "multiply":
-    opSymbol = " * ";
-    result = multiply(x,y);
-    break;
-  case "divide":
-    opSymbol = " / ";
-    result = divide(x,y);
-    break;
-  default:
-    console.log("Please specify valid operation.");
-}
-console.log(numberToString(x) + opSymbol + numberToString(y) + " = " + result);
-return result;
+  var opSymbol = "";
+  var result = null;
+  switch (operation) {
+    case "add":
+      opSymbol = " + ";
+      result = add(x,y);
+      break;
+    case "subtract":
+      opSymbol = " - ";
+      result = subtract(x,y);
+      break;
+    case "multiply":
+      opSymbol = " * ";
+      result = multiply(x,y);
+      break;
+    case "divide":
+      opSymbol = " / ";
+      result = divide(x,y);
+      break;
+    default:
+      console.log("Please specify valid operation.");
+  }
+  console.log(numberToString(x) + opSymbol + numberToString(y) + " = " + result);
+  return result;
 }
 
 /**
@@ -197,6 +197,37 @@ function isOdd(n) {
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+function letterGrade(score, total) {
+  var percent = score/total * 100;
+  var grade = "";
+
+  switch (true) {
+    case (90 <= percent && percent <= 100):
+      grade = "A";
+      console.log('reaches here');
+      break;
+    case (80 <= percent && percent < 90):
+      grade = "B";
+      break;
+    case (70 <= percent && percent < 80):
+      grade = "C";
+      break;
+    case (60 <= percent && percent < 70):
+      grade = "D";
+      break;
+    case (0 <= percent && percent < 60):
+      grade = "F";
+      break;
+  }
+/*
+  if (90 <= percent && percent <= 100) {
+    console.log('reaches here');
+  } else {
+    console.log('did not reach A case');
+  }*/
+  return grade;
+}
+
 
 /**
  * Checks if a `restaurant` object has are `views` field.
