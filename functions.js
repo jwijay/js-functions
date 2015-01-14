@@ -257,3 +257,10 @@ function combine(word1, word2) {
  * @param {number} radius
  * @return {object} circle
  */
+function createCircle(radius) {
+  var Circle = {
+    circumference: 2 * Math.PI * radius,
+    area: Math.PI * square(radius)
+  };
+  return Circle;
+}
