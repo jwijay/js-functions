@@ -219,12 +219,7 @@ function letterGrade(score, total) {
       grade = "F";
       break;
   }
-/*
-  if (90 <= percent && percent <= 100) {
-    console.log('reaches here');
-  } else {
-    console.log('did not reach A case');
-  }*/
+
   return grade;
 }
 
@@ -235,6 +230,15 @@ function letterGrade(score, total) {
  * set itsreviews` field to 1.
  * @param {object} restaurant represents a restaurant
  */
+function incrementReviews(restaurant) {
+  if (restaurant.reviews !== undefined) {
+    restaurant.reviews += 1;
+    console.log("gets here");
+  } else {
+    restaurant.reviews = 1;
+  }
+  return restaurant;
+}
 
 /**
  * Joins two strings with a space.
@@ -242,7 +246,7 @@ function letterGrade(score, total) {
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
-
+ 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
  * Use Math.PI for the value π.
