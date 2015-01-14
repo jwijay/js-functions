@@ -7,12 +7,14 @@ function numberToString(n) {
   return n.toString();
 }
 
-
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
+ function increase(n) {
+  return n += 1;
+ }
 
 /**
  * Subtracts one from a given number.
