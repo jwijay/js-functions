@@ -42,7 +42,7 @@ function add(x, y) {
  * @param {number} y
  * @return {number} the difference
  */
-function substract(x, y) {
+function subtract(x, y) {
   return x - y;
 }
 
