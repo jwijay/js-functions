@@ -83,6 +83,32 @@ function square(x) {
  * @param {number} y
  * @return {number} the result
  */
+ function calculate(operation, x, y) {
+  var opSymbol = "";
+  var result = null;
+  switch (operation) {
+    case "add":
+      opSymbol = " + ";
+      result = add(x,y);
+      break;
+    case "subtract":
+      opSymbol = " - ";
+      result = subtract(x,y);
+      break;
+    case "multiply":
+      opSymbol = " * ";
+      result = multiply(x,y);
+      break;
+    case "divide":
+      opSymbol = " / ";
+      result = divide(x,y);
+      break;
+    default:
+      console.log("Please specify valid operation.");
+  }
+  console.log(numberToString(x) + opSymbol + numberToString(y) + " = " + result);
+  return result;
+ }
 
 /**
  * Returns true if `a` is greater than `b`.
