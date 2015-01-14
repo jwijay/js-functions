@@ -116,6 +116,10 @@ function square(x) {
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
+ function isGreaterThan(a, b) {
+  return (a > b);
+ }
+
 
 /**
  * Returns true if `a` is less than `b`.
