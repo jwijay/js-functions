@@ -12,9 +12,9 @@ function numberToString(n) {
  * @param {number} n
  * @return {number}
  */
- function increase(n) {
+function increase(n) {
   return n += 1;
- }
+}
 
 /**
  * Subtracts one from a given number.
@@ -22,9 +22,9 @@ function numberToString(n) {
  * @return {number}
  */
 
- function decrease(n) {
+function decrease(n) {
   return n -= 1;
- }
+}
 
 /**
  * Adds two numbers.
@@ -83,32 +83,32 @@ function square(x) {
  * @param {number} y
  * @return {number} the result
  */
- function calculate(operation, x, y) {
-  var opSymbol = "";
-  var result = null;
-  switch (operation) {
-    case "add":
-      opSymbol = " + ";
-      result = add(x,y);
-      break;
-    case "subtract":
-      opSymbol = " - ";
-      result = subtract(x,y);
-      break;
-    case "multiply":
-      opSymbol = " * ";
-      result = multiply(x,y);
-      break;
-    case "divide":
-      opSymbol = " / ";
-      result = divide(x,y);
-      break;
-    default:
-      console.log("Please specify valid operation.");
-  }
-  console.log(numberToString(x) + opSymbol + numberToString(y) + " = " + result);
-  return result;
- }
+function calculate(operation, x, y) {
+var opSymbol = "";
+var result = null;
+switch (operation) {
+  case "add":
+    opSymbol = " + ";
+    result = add(x,y);
+    break;
+  case "subtract":
+    opSymbol = " - ";
+    result = subtract(x,y);
+    break;
+  case "multiply":
+    opSymbol = " * ";
+    result = multiply(x,y);
+    break;
+  case "divide":
+    opSymbol = " / ";
+    result = divide(x,y);
+    break;
+  default:
+    console.log("Please specify valid operation.");
+}
+console.log(numberToString(x) + opSymbol + numberToString(y) + " = " + result);
+return result;
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -116,9 +116,9 @@ function square(x) {
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
- function isGreaterThan(a, b) {
-  return (a > b);
- }
+function isGreaterThan(a, b) {
+return (a > b);
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -126,9 +126,9 @@ function square(x) {
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
- function isLessThan(a, b) {
-  return (a < b);
- }
+function isLessThan(a, b) {
+return (a < b);
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -182,6 +182,9 @@ function isEven(n) {
  * @param {number} n
  * @return {boolean} the number is odd
  */
+function isOdd(n) {
+  return Math.abs(n % 2) === 1;
+}
 
 /**
  * Returns a letter grade.
